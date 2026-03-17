@@ -2,6 +2,15 @@ from core.config import get_logger
 from core.types import FileProfile, CategorizationResult
 
 logger = get_logger("AgentCategorizer")
+test_profile = FileProfile(
+        filename="example_facture.pdf",
+        file_type="document",
+        topic="facture",
+        keywords=["facture", "paiement", "total"],
+        signals={"has_year": True, "extension": ".pdf", "content_len": 500}
+    )
+
+  
 
 TOPIC_MAP = {
     # Administratif
